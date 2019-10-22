@@ -59,19 +59,61 @@
           </div>
           <div class="col-sm-3">
             <!-- One of three columns -->
+            <button></button>
+
           </div>
           <div class="col-sm-9">
             <!-- One of three columns -->
           </div>
         </div>
     <h3>Pagina de inicio</h3>
-    Contenido
+    <div id="divNoticias">
+      <table>
+        <tr>
+          <td>Nombre1</td>
+          <td>Apellido1</td>
+          <td>ci1</td>
+          <td><button class="btn btn-primary persona" persona_id="3">Mostrar</button></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table> 
+
+    </div>
+    <!-- Contenido -->
 </div>
 <!-- Fin contenido -->
     <footer>
-            Derechos Reservados &copy; 2019 <br>,Email: sarzurisilvestre@gmail.com <br>
+            Dr &copy; 2019 <br>,Email: sarzurisilvestre@gmail.com <br>
             www.lss.com
     </footer>
 
+
+    <script type="text/javascript">
+      $(document).ready(function){
+        $('.cambio').click(function(){
+          alert('funciona');
+    
+        });
+        $('#botons3').click(function(){
+          console.log('se presiono el boton 3')
+        });
+        $('.persona')click(function(){
+          $('this')
+          alert('persona seleccionada')
+        });
+      }
+    </script>
+    
 </body>
 </html>
