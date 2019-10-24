@@ -50,19 +50,30 @@
         </div>
      </nav>
 
-    <p>Bienvenido[a], por favor complete el siguiente formulario, escribiendo su nombre
+    <p id="demo">Bienvenido[a], por favor complete el siguiente formulario, escribiendo su nombre
          completo. Gracias</p>
+    <button onclick="myFunction()">Click me!!!</button>
 
     <form>
-          <div class="form-group">
-            <label for="formGroupExampleInput">Nombres</label>
-            <label for="formGroupExampleInput2">Telefono</label>
-            <label for="exampleInputEmail3">Email address</label>
-            <label for="formGroupExampleInput4">Comentario</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-            <div class="form-group form-check">
+        <div class="form-group has-success has-feedback">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-nombre"></i></span>
+            <label for="usr" >Nombres:</label>
+            <input type="text" class="form-control" name="user" id="usr" placeholder="Ingrese su nombre">
+        </div>
+        <div class="form-group">
+            <label for="usr">Telefono:</label>
+            <input type="text" class="form-control" id="Telefono" name="telefono">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail3">Email address:</label>
+            <input type="text" class="form-control" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+          
+          <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
@@ -92,7 +103,16 @@
         </div>
     </div>
 </div>
+
 <!-- Fin contenido -->
+
+<script>
+    function myFunction() {
+  var x = document.getElementById("demo");
+  x.style.fontSize = "20px"; 
+  x.style.color = "blue"; 
+}
+</script>
     <footer>
             Derechos Reservados &copy; 2019 <br>,Email: sarzurisilvestre@gmail.com <br>
             www.lss.com
