@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="plantilla/css/estilos.css" th:href="@{/css/index.css}">
     <title>Empresa MH</title>
   </head>
   <body>
@@ -43,7 +43,7 @@
               <a class="navbar-brand" href="registro.html">Registro</a><br>
               <a class="navbar-brand" href="login.html">Login</a> <br>
               <div class="dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Contactenos</a>
+                <a class="navbar-brand" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Contactenos</a>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="contactenos/consulta.html">Consultas</a>
@@ -155,8 +155,18 @@
         </div>
 
     <footer>
-          Dr &copy; 2019 <br>,Email: sarzurisilvestre@gmail.com <br>
-          www.lss.com
+        <div class="container" text="center">
+            <div class="row">
+              <div class="col-sm" >
+              </div>
+              <div class="col-sm-12" >
+                  Dr &copy; 2019 <br>,Email: sarzurisilvestre@gmail.com <br>
+                  www.lss.com
+              </div>
+              <div class="col-sm-12">
+              </div>
+            </div>
+        </div>
     </footer>
   </body>
 </html>
