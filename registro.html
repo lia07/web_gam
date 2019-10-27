@@ -7,14 +7,15 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="plantilla/css/estilos.css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" type="text/css" href="plantilla/css/registro.css" th:href="@{/css/index.css}">
+    
     <title>Empresa MH</title>
   </head>
   <body>
     <header>
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="#">
-              <img src="plantilla/img/logo1.png" width="79" height="45" class="d-inline-block align-top" alt="">Empresa MH
+              <img src="plantilla/img/logo.png" width="79" height="45" class="d-inline-block align-top" alt="">Empresa MH
             </a>
             <!-- <h1>Empresa MH</h1> -->
         </nav>
@@ -59,112 +60,39 @@
       </div>
   </section>
 
-  <div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-tab">
-      <div class="card">
-        <div class="card-header">
-          <h4>User Information</h4>
-        </div>
-        <div class="card-body">
-          <form class="form" role="form" autocomplete="off">
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">First name</label>
-              <div class="col-lg-9">
-                <input class="form-control" type="text" >
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">Last
-                name</label>
-              <div class="col-lg-9">
-                <input class="form-control" type="text" >
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">Email</label>
-              <div class="col-lg-9">
-                <input class="form-control" type="email">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">Username</label>
-              <div class="col-lg-9">
-                <input class="form-control" type="text">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">Password</label>
-              <div class="col-lg-9">
-                <input class="form-control" type="password">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">Confirm</label>
-              <div class="col-lg-9">
-                <input class="form-control" type="password" >
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-lg-12 text-center">
-                <input type="reset" class="btn btn-secondary" value="Cancel">
-                <input type="button" class="btn btn-primary"
-                  value="Save Changes">
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
 
-    
-   
-    
-        <div class="card-header">
+        <!-- <div class="card-header">
           <h4>User Information</h4>
-        </div>
+        </div> -->
         <div class="card-body">
         <form>
+            <div class="card-header">
+                <h4>User Information</h4>
+              </div>
+              <div class="card-body">
             <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Nombres</label>
+                <label class="col-lg-3 col-form-label form-control-label" >Nombres</label>
                 <div class="col-lg-9">
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese nombres">
+                <input type="text" class="form-control" id="formGroupExampleInput" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" placeholder="Ingrese nombres" required>
               </div>
               </div>
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">Apellidos</label>
                 <div class="col-lg-9">
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese apellidos">
+                <input type="text" class="form-control" id="formGroupExampleInput2" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" placeholder="Ingrese apellidos" required>
               </div>
               </div>
             <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Email</label>
+                <label class="col-lg-3 col-form-label form-control-label">Ci</label>
                 <div class="col-lg-9">
-                  <input class="form-control" type="email">
+                  <input class="form-control" type="ci" maxlength="10" minlength="5" pattern="[0-9]{10}" placeholder="Ingrese ci" required>
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Username</label>
+                <label class="col-lg-3 col-form-label form-control-label">Fecha de Nacimiento</label>
                 <div class="col-lg-9">
-                  <input class="form-control" type="text">
+                  <input class="form-control" type="datetime-local" name="fecha" step="1" min="2019-01-01" max="2019-12-31" value="2019-01-01" placeholder="Seleccione la Fecha" required>
                 </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Password</label>
-                <div class="col-lg-9">
-                  <input class="form-control" type="password">
-                </div>
-              </div>
-                <div class="form-group row">
-                  <label class="col-lg-3 col-from-label form-control-label">Direccion</label>
-                  <div class="col-lg-9">
-                  <input type="address" class="form-control" id="inputAddress" placeholder="Ingresar direccion">
-                  </div>
-              </div>
-              
-              <div class="form-group row">
-                  <label class="col-lg-3 col-from-label form-control-label">Ciudad</label>
-                  <div class="col-lg-9">
-                    <input type="city" class="form-control" id="inputAddress" placeholder="Ingresar ciudad">
-                  </div>
               </div>
                 
                 
@@ -176,20 +104,24 @@
                     </label>
                   </div>
                 </div>
-                <!-- <button type="submit" class="btn btn-primary">Registrar</button>
-                <button type="submit" class="btn btn-primary">Cancelar</button> -->
+                
                 <div class="form-group row">
                     <div class="col-lg-12 text-center">
+                      <input type="button" class="btn btn-primary" value="Registrar">
                       <input type="reset" class="btn btn-secondary" value="Cancel">
-                      <input type="button" class="btn btn-primary"
-                        value="Save Changes">
                     </div>
                   </div>
           </form>
+        
 
           <footer>
-              Dr &copy; 2019 Email: sarzurisilvestre@gmail.com <br>
-              www.lss.com
-          </footer>
+              <div class="form-group row">
+                  <div class="col-lg-12 text-center">
+                      
+                      D &copy; 2019 Email: sarzurisilvestre@gmail.com <br>
+                        www.lss.com
+                  </div>
+             </div> 
+          </footer
     </body>
 </html>
