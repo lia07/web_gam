@@ -88,14 +88,3 @@ footer{
     font-family: arial;
     font-size: 18px;
 }
-
-@media screen and (max-width: 768px) {
-    #gtco-footer .copyright .pull-left,
-    #gtco-footer .copyright .pull-right {
-      float: none !important;
-      text-align: center;
-    }
-  }
-  #gtco-footer .copyright .block {
-    display: block;
-  }
