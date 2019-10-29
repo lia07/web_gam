@@ -22,7 +22,8 @@ label{
 }
 
 .nav-tabs .nav-item a:not(.active){
-	background-color: #d1d3d6;
+    /* background-color: #d1d3d6; */
+    background-color: #111f35;
 }
 
 .nav-tabs{
