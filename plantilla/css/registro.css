@@ -11,8 +11,10 @@ body{
 	opacity: .95;
 }
 .card-body{
+    /* background-color: #d1d3d6;
+    box-shadow: 0px 0px 3px #848484; */
     background-color: #d1d3d6;
-    box-shadow: 0px 0px 3px #848484;
+    box-shadow: 0px 0px 3px #613253; /*margen del formulario*/
 }
 
 label{
@@ -25,4 +27,19 @@ label{
 
 .nav-tabs{
 	border-bottom:0px;
+}
+
+footer{
+    max-width: 2880px;
+    /*min-height: 130px;*/
+    background: rgba(65, 19, 87, 0.589);
+    margin: 0 auto;
+    border-radius: 0 0 20px 20px;
+    color: #fff;
+    text-align: center;
+    /* padding: 30px; */
+    padding: 5px;  /* alto pp*/
+    box-sizing: border-box; /*crecimiento internamente*/
+    font-family: arial;
+    font-size: 18px;
 }

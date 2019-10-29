@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="../css/registro.css" th:href="@{/css/index.css}">
     <title>Empresa MH</title>
   </head>
   <body>
@@ -50,36 +50,36 @@
         </div>
      </nav>
 
-    <p id="demo">Bienvenido[a], por favor complete el siguiente formulario, escribiendo su nombre
-         completo. Gracias</p>
+    <p id="demo">Todos los campos son obligatorios</p>
     <button onclick="myFunction()">Click me!!!</button>
+
     <div class="card-body">
-    <form method="get" onsubmit="return valida(this)">
+    <form class="col-12" th:action="@{/consulta}" method="get" onsubmit="return valida(this)">
         <div class="card-header">
             <h4>User Information</h4>
         </div>
         <div class="card-body">
             <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label" >Nombres</label>
+                <label class="col-lg-3 col-form-label form-control-label" >Nombres:</label>
                 <div class="col-lg-9">
                 <input type="text" class="form-control" id="formGroupExampleInput" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" placeholder="Ingrese nombres" required>
                </div>
           </div>
               <div class="form-group row">
-                <label class="col-lg-3 col-form-label form-control-label">Telefono</label>
+                <label class="col-lg-3 col-form-label form-control-label">Telefono:</label>
                 <div class="col-lg-9">
                 <input type="tele" class="form-control" id="formGroupExampleInput2" maxlength="10" minlength="4" pattern="^[7|6|5|4]\d{8}$" placeholder="Ingrese telefono" required>
               </div>
               </div>
               <div class="form-group row">
-                  <label class="col-lg-3 col-form-label form-control-label">Email</label>
+                  <label class="col-lg-3 col-form-label form-control-label">Email:</label>
                   <div class="col-lg-9">
                     <input class="form-control" type="email" placeholder="Ingrese email" required>
                   </div>
               </div>
             <div class="form-group row">
-                <label for="comment">Comment:</label>
-                <textarea class="form-control" rows="5" id="comment" minlength="5" maxlength="50" required></textarea>
+                <label for="comment">Comentario:</label>
+                <textarea class="form-control" rows="5" id="comment" minlength="5" maxlength="100" required></textarea>
             </div>
           
           <div class="form-group form-check">
@@ -92,8 +92,6 @@
               <input type="reset" class="btn btn-secondary" value="Cancelar">             
             </div>
         </div>
-        <!-- <button type="submit" class="btn btn-primary">Enviar</button>
-        <button type="submit" class="btn btn-primary">Cancelar</button> -->
    </form>
   </div>
 
@@ -101,7 +99,7 @@
     function myFunction() {
   var x = document.getElementById("demo");
   x.style.fontSize = "15px"; 
-  x.style.color = "blue"; 
+  x.style.color = "red"; 
 }
 
 function validar(){
@@ -119,7 +117,6 @@ if (!expresion.test(email)){
     todo_correcto = false;
 }
 }
-
 </script>
     <footer>
         <div class="form-group row">

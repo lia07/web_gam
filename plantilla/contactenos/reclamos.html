@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="../css/registro.css" th:href="@{/css/index.css}">
     <title>Empresa MH</title>
   </head>
   <body>
@@ -52,83 +52,55 @@
      </nav>
 
 
+   <div class="card-body">
      <form class="form" role="form" autocomplete="off">
+        <div class="card-header">
+            <h4>User Information</h4>
+        </div>
       <div class="form-group row">
-        <label class="col-lg-3 col-form-label form-control-label">Nombre Cliente</label>
+        <label class="col-lg-3 col-form-label form-control-label">Nº Cliente</label>
         <div class="col-lg-9">
-          <input class="form-control" type="text" >
+          <input class="form-control" type="cliente" maxlength="5" minlength="1" pattern="^[a-zA-Z0-9_.-]*$" placeholder="Ingrese nº cliente" required>
         </div>
       </div>
       <div class="form-group row">
         <label class="col-lg-3 col-form-label form-control-label">Nombres</label>
         <div class="col-lg-9">
-          <input class="form-control" type="text" >
+          <input class="form-control" type="nombres" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" placeholder="Ingrese nombres" required >
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-lg-3 col-form-label form-control-label">Email</label>
+        <label class="col-lg-3 col-form-label form-control-label">Apellidos</label>
         <div class="col-lg-9">
-          <input class="form-control" type="email">
+          <input class="form-control" type="apellido" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" placeholder="Ingrese apellidos" required>
         </div>
       </div>
-      <div class="form-group row">
-        <label class="col-lg-3 col-form-label form-control-label">Username</label>
-        <div class="col-lg-9">
-          <input class="form-control" type="text">
-        </div>
+      <div class="dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tipo de Reclamo</a> 
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="contactenos/corte.html">Corte</a>
+            <a class="dropdown-item" href="contactenos/multa.html">Multa</a>
+          </div>
       </div>
-      <div class="form-group row">
-        <label class="col-lg-3 col-form-label form-control-label">Password</label>
-        <div class="col-lg-9">
-          <input class="form-control" type="password">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="col-lg-3 col-form-label form-control-label">Confirm</label>
-        <div class="col-lg-9">
-          <input class="form-control" type="password" >
-        </div>
+      <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
       </div>
       <div class="form-group row">
         <div class="col-lg-12 text-center">
+          <input type="button" class="btn btn-primary" value="Save Changes">
           <input type="reset" class="btn btn-secondary" value="Cancel">
-          <input type="button" class="btn btn-primary"
-            value="Save Changes">
         </div>
       </div>
     </form>
+  </div>
 
-
-    <form class="form" role="form" autocomplete="off">
-        <div class="form-group">
-          <label for="formGroupExampleInput">Numero cliente</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese nombres">
-        </div>
-        <div>
-          <label for="formGroupExampleInput">Nombres</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese nombres">
-        </div>
-        <div>
-          <label for="formGroupExampleInput">Apellidos</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese nombres">
-        </div>
-        <div>
-          <label for="formGroupExampleInput">Tipo de reclamos</label>
-        </div>
-        <div>
+        <!-- <div>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-        <button type="submit" class="btn btn-primary">Cancelar</button>
-    </form>
-
+        </div> -->
     <div class="row justify-content-center">
-        <div class="col-8">
+        <div class="col-10">
             <div class="embed-responsive embed-responsive-16by9">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15229.825621531023!2d-66.1642438173294!3d-17.38987121973825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e373f7db42c683%3A0x4884cffec0bf3bec!2sSEDUCA%20Cbba!5e0!3m2!1ses-419!2sbo!4v1571679753116!5m2!1ses-419!2sbo" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
               <div class="container">
@@ -153,9 +125,8 @@
 <!-- Fin contenido -->
     <footer>
         <div class="form-group row">
-            <div class="col-lg-12 text-center">
-                
-                Dr &copy; 2019 <br>,Email: sarzurisilvestre@gmail.com <br>
+            <div class="col-lg-12 text-center">   
+                Dr &copy; 2019 Email: sarzurisilvestre@gmail.com <br>
                   www.lss.com
             </div>
        </div>
