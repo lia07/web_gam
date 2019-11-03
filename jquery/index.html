@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="../css/registro.css" th:href="@{/css/index.css}">
     <title>Empresa MH</title>
   </head>
   <body>
@@ -38,48 +38,56 @@
             <!-- One of three columns -->
           </div>
         </div>
-    <h3>Pagina de inicio</h3>
-    <!-- Contenido -->
-    <div id="divNoticias">
-      <table>
-        <tr>
-          <td><input type="text" value="Nombre1"></td>
-          <td><input type="text" value="Apellido1"></td>
-          <td><input type="text" value="ci1"></td>
-          <td><button class="btn btn-primary persona" persona_id="1">Mostrar</button></td>
-        </tr>
-        <tr>
-          <td> <input type="text" value="Nombre2"></td>
-          <td> <input type="text" value="Apellido2"></td>
-          <td> <input type="text" value="ci2"></td>
-          <td><button class="btn btn-primary persona" persona_id="2"></button>Mostrar </td>
-        </tr>
-        <tr>
-          <td><input type="text" value="Nombre3"></td>
-          <td><input type="text" value="Apellido3"></td>
-          <td><input type="text" value="ci3"></td>
-          <td><button class="btn btn-primary persona" persona_id="3">Mostrar</button></td>
-        </tr>
-        <tr>
-          <td><input type="text" value="Nombre4"></td>
-          <td><input type="text" value="Apellido4"></td>
-          <td><input type="text" value="ci4"></td>
-          <td><button class="btn btn-primary persona" persona_id="4">Mostrar</button></td>
-        </tr>
-        <tr>
-          <td><input type="text" value="Nombre5"></td>
-          <td><input type="text" value="Apellido5"></td>
-          <td><input type="text" value="ci5"></td>
-          <td><button class="btn btn-primary persona" persona_id="5">Mostrar</button></td>
-        </tr>
-      </table> 
+ 
+        <div class="col-sm-9" style="background-color:blueviolet">  
+          <h3>Pagina de inicio</h3>
+          <!-- Contenido -->
+          <div div class="col-lg-12 text-center" id="divNoticias">
+            <table>
+              <tr>
+                <td><input id="nombre1" type="text" value="Nombre1"></td>
+                <td><input id="apellido1" type="text" value="Apellido1"></td>
+                <td><input id="ci1" type="text" value="ci1"></td>
+                <td><input id="email1" type="text" value="Email1"></td>
+                <td><button class="btn btn-primary persona" persona_id="1">Mostrar</button></td>
+              </tr>
+              <tr>
+                <td> <input type="text" value="Nombre2"></td> 
+                <td> <input type="text" value="Apellido2"></td>
+                <td> <input type="text" value="ci2"></td>
+                <td><input id="email2" type="text" value="Email2"></td>
+                <td><button class="btn btn-primary persona" persona_id="2">Mostrar</button></td>
+              </tr> 
+              <tr>
+                <td><input type="text" value="Nombre3"></td>
+                <td><input type="text" value="Apellido3"></td>
+                <td><input type="text" value="ci3"></td>
+                <td><input id="email3" type="text" value="Email3"></td>
+                <td><button class="btn btn-primary persona" persona_id="3">Mostrar</button></td>
+              </tr>
+              <tr>
+                <td><input type="text" value="Nombre4"></td>
+                <td><input type="text" value="Apellido4"></td>
+                <td><input type="text" value="ci4"></td>
+                <td><input id="email4" type="text" value="Email4"></td>
+                <td><button class="btn btn-primary persona" persona_id="4">Mostrar</button></td>
+              </tr>
+              <tr>
+                <td><input type="text" value="Nombre5"></td>
+                <td><input type="text" value="Apellido5"></td>
+                <td><input type="text" value="ci5"></td>
+                <td><input id="email5" type="text" value="Email5"></td>
+                <td><button class="btn btn-primary persona" persona_id="5">Mostrar</button></td>
+              </tr>
+            </table> 
+          </div>
+      </div>
     </div>
-</div>
+  
 <!-- Fin contenido -->
 
-
     <script type="text/javascript">
-      $(document).ready(function){
+      $(document).ready(function(){
         $('.cambio').click(function(){
           alert('funciona');
     
@@ -87,7 +95,7 @@
         $('#botons3').click(function(){
           console.log('se presiono el boton 3')
         });
-        $('.persona')click(function(e){
+        $('.persona').click(function(e){
         var elemento = $('this').attr('persona_id');
         var nombre = $('#nombre1').value;
         var apellido = $('#apellido' + elemento).value;
@@ -95,11 +103,11 @@
           // alert('persona seleccionada')
           alert('elemento')
         });
-      }
+      });
     </script>
     <footer>
-      <div class="row copyright">
-          <div class="col-md-12">
+      <div class="form-group row" style="background-color: darkgreen">
+          <div div class="col-lg-12 text-center">
             <p class="pull-left">
               <small class="block">&copy; 2019 Email: sarzurisilvestre@gmail.com.</small> <br>
               <small class="block">www.lss.com <a href="#" target="_blank"></a></small>
