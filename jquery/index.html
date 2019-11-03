@@ -88,13 +88,14 @@
 
     <script type="text/javascript">
       $(document).ready(function(){
-        $('.cambio').click(function(){
+        $('.cambio').click(function(e){
           alert('funciona');
     
         });
-        $('#botons3').click(function(){
+        $('#botons3').click(function(e){
           console.log('se presiono el boton 3')
         });
+
         $('.persona').click(function(e){
         var elemento = $('this').attr('persona_id');
         var nombre = $('#nombre1').value;
