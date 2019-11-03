@@ -33,13 +33,13 @@
           <div class="col-sm-3">
             <!-- One of three columns -->
             <button></button>
-
           </div>
           <div class="col-sm-9">
             <!-- One of three columns -->
           </div>
         </div>
     <h3>Pagina de inicio</h3>
+    <!-- Contenido -->
     <div id="divNoticias">
       <table>
         <tr>
@@ -52,7 +52,7 @@
           <td> <input type="text" value="Nombre2"></td>
           <td> <input type="text" value="Apellido2"></td>
           <td> <input type="text" value="ci2"></td>
-          <td><button class="btn btn-primary persona" persona_id="2"></button> </td>
+          <td><button class="btn btn-primary persona" persona_id="2"></button>Mostrar </td>
         </tr>
         <tr>
           <td><input type="text" value="Nombre3"></td>
@@ -64,18 +64,18 @@
           <td><input type="text" value="Nombre4"></td>
           <td><input type="text" value="Apellido4"></td>
           <td><input type="text" value="ci4"></td>
-          <td><button class="btn btn-primary persona" persona_id="3">Mostrar</button></td>
+          <td><button class="btn btn-primary persona" persona_id="4">Mostrar</button></td>
+        </tr>
+        <tr>
+          <td><input type="text" value="Nombre5"></td>
+          <td><input type="text" value="Apellido5"></td>
+          <td><input type="text" value="ci5"></td>
+          <td><button class="btn btn-primary persona" persona_id="5">Mostrar</button></td>
         </tr>
       </table> 
-
     </div>
-    <!-- Contenido -->
 </div>
 <!-- Fin contenido -->
-    <footer>
-            Dr &copy; 2019 <br>,Email: sarzurisilvestre@gmail.com <br>
-            www.lss.com
-    </footer>
 
 
     <script type="text/javascript">
@@ -87,12 +87,25 @@
         $('#botons3').click(function(){
           console.log('se presiono el boton 3')
         });
-        $('.persona')click(function(){
-          $('this')
-          alert('persona seleccionada')
+        $('.persona')click(function(e){
+        var elemento = $('this').attr('persona_id');
+        var nombre = $('#nombre1').value;
+        var apellido = $('#apellido' + elemento).value;
+        var ci = $('#ci' + elemento).value;
+          // alert('persona seleccionada')
+          alert('elemento')
         });
       }
     </script>
-    
+    <footer>
+      <div class="row copyright">
+          <div class="col-md-12">
+            <p class="pull-left">
+              <small class="block">&copy; 2019 Email: sarzurisilvestre@gmail.com.</small> <br>
+              <small class="block">www.lss.com <a href="#" target="_blank"></a></small>
+            </p>
+          </div>
+        </div>
+    </footer>  
 </body>
 </html>
