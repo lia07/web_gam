@@ -209,25 +209,15 @@
 
 <!-- Fin contenido -->
 
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('.cambio').click(function(e){
-          alert('funciona');
-    
-        });
-        $('#botons3').click(function(e){
-          console.log('se presiono el boton 3')
-        });
-
-        $('.persona').click(function(e){
-        var elemento = $('this').attr('persona_id');
-        var nombre = $('#nombre1').value;
-        var apellido = $('#apellido' + elemento).value;
-        var ci = $('#ci' + elemento).value;
-          // alert('persona seleccionada')
-          alert('elemento')
-        });
-      });
+<script type="text/javascript">
+    function eliminar() {
+      var x = confirm("Eliminar Estudiante ?");
+      if (x)
+        return true;
+      else
+        return false;
+    }
+  </script>
     </script>
     <footer>
       <div class="form-group row" style="background-color: darkgreen">
